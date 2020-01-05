@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>New Chat app</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+</head> 
+<body>
+    <nav class='navbar navbar-expand-sm bg-dark navbar-dark fixed-top'>
+        <p class='text-white' id="online-users">Enter Your name </p>
+    </nav>
+    <nav class='navbar navbar-expand-sm bg-dark navbar-dark fixed-bottom' style='padding: 10px;'>
+        <!-- <div class='jumbotron'> -->
+        <div class="input-group col-sm-10 pull-center"  style='margin-top:20px;'>
+            <!-- <div class='push-center'> -->
+            <input id='message'type="text" class='form-control'
+            placeholder="Send message">
+            <div class='input-group-append'>
+                <button id='send' class='btn btn-primary'>
+                    <i class="fa fa-paper-plane" aria-hidden="true"></i>
+                </button>
+            </div>
+            <!-- </div> -->
+        </div>
+        <!-- </div> -->
+    </nav>
+    <div class="" id="modal" style="margin-top:100px;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Enter Your name</h4>
+                </div>
+                <div class="modal-body">
+                    <div class='input-group'>
+                        <input type="text" id='name' class='form-control' 
+                        placeholder="Your name">
+                        <div class='input-group-append'>
+                            <button type="button" id='ok' class="btn btn-success">
+                                Ok
+                            </button>
+                        </div>
+                    </div>
+                    <div class='row' style='margin-top: 20px;' id='chat-box-color'>
+                        <button class='btn btn-primary' id='primary'>+</button>
+                        <button class='btn btn-info' id='info'>+</button>
+                        <button class='btn btn-warning' id='warning'>+</button>
+                        <button class='btn btn-danger' id='danger'>+</button>
+                        <button class="btn btn-success" id='success'>+</button>
+                    </div>
+                    <div id='alts' style='margin-top:20px;'>
+                        
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <p>An app by Rudra Choubey</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id='messages' style='margin-top: 80px; margin-bottom: 80px;'>
+
+    </div>
+    <script src="socket.io/socket.io.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
